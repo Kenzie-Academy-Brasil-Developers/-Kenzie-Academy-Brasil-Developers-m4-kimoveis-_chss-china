@@ -4,10 +4,13 @@
   "main": "index.ts",
   "author": "Felipe <felipe.silva@kenzie.com.br>",
   "license": "MIT",
+  "engines": {
+    "node": "18"
+  },
   "scripts": {
     "dev": "ts-node-dev --rs --cls --ignore-watch node_modules src/server.ts",
     "typeorm": "typeorm-ts-node-commonjs",
-    "build": "tsc",
+    "build": "tsup src",
     "start": "node dist/server.js",
     "test": "cross-env NODE_ENV=test SECRET_KEY=secret_key jest --verbose --runInBand"
   },
